@@ -18,7 +18,7 @@ Users should be able to:
 ### Links
 
 * Solution URL: https://github.com/charansomisetti144-eng/social-profile.git
-* Live Site URL: https://charansomisetti144-eng.github.io/your-repository-name/
+* Live Site URL: https://charansomisetti144-eng.github.io/social-profile/
 
 ## My Process
 
