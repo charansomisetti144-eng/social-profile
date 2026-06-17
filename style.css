@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Inter",sans-serif;
+    background-color: hsl(0, 0%, 8%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 14px;
+}
+
+.attribution{
+    position: fixed;
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
+    color: hsl(75, 94%, 57%);
+}
+
+.profile-card{
+    background-color: hsl(0, 0%, 12%);
+    padding: 40px;
+    border-radius: 16px;
+    width: 320px;
+    max-width: 420px;
+    text-align: center;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+h1{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 24px 0 8px;
+}
+
+.location{
+    color: hsl(75, 94%, 57%);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 24px;
+}
+
+.bio{
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 24px;
+
+}
+
+.social-links{
+    list-style: none;
+    padding: 0;
+}
+
+.social-link a{
+    display: block;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 20%);
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-link{
+    margin-bottom: 16px;
+}
+
+.social-link a:hover{
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.social-link a:focus{
+    outline: 2px solid hsl(75, 94%, 57%);
+    outline-offset: 2px;
+}
+
+.social-link:last-child{
+    margin-bottom: 0;
+}
+
+@media (max-width: 375px){
+    .profile-card{
+        width: 90%;
+        padding: 24px;
+    }
+
+    h1{
+        font-size: 1.4rem;
+    }
+
+}
