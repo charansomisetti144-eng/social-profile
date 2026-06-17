@@ -1,110 +1,166 @@
+/* ===== Global ===== */
+
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: border-box;
 }
 
-body{
+:root {
+    --grey-900: hsl(0, 0%, 8%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-700: hsl(0, 0%, 20%);
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* ===== Body ===== */
+
+body {
     margin: 0;
-    font-family: "Inter",sans-serif;
-    background-color: hsl(0, 0%, 8%);
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
-    align-items:center;
-    font-size: 14px;
+    align-items: center;
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+
+    background-color: var(--grey-900);
 }
 
-.attribution{
-    position: fixed;
-    bottom: 1px;
-    width: 100%;
+/* ===== Main ===== */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ===== Profile Card ===== */
+
+.profile-card {
+    background-color: var(--grey-800);
+
+    width: 350px;
+    padding: 2.5rem;
+
+    border-radius: 1rem;
+
     text-align: center;
-    color: hsl(75, 94%, 57%);
 }
 
-.profile-card{
-    background-color: hsl(0, 0%, 12%);
-    padding: 40px;
-    border-radius: 16px;
-    width: 320px;
-    max-width: 420px;
-    text-align: center;
-}
+/* ===== Avatar ===== */
 
-img{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+img {
     display: block;
+
+    width: 5rem;
+    height: 5rem;
+
     margin: 0 auto;
+
+    border-radius: 50%;
 }
 
-h1{
-    color: hsl(0, 0%, 100%);
+/* ===== Typography ===== */
+
+h1 {
+    margin: 1.5rem 0 0.5rem;
+
+    color: var(--white);
+
     font-size: 1.75rem;
     font-weight: 700;
-    margin: 24px 0 8px;
 }
 
-.location{
-    color: hsl(75, 94%, 57%);
-    font-size: 14px;
+.location {
+    margin: 0 0 1.5rem;
+
+    color: var(--green);
+
+    font-size: 0.875rem;
     font-weight: 600;
-    margin: 0 0 24px;
 }
 
-.bio{
-    color: hsl(0, 0%, 100%);
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 24px;
+.bio {
+    margin-bottom: 1.5rem;
 
+    color: var(--white);
+
+    line-height: 1.5;
 }
 
-.social-links{
-    list-style: none;
+/* ===== Social Links ===== */
+
+.social-links {
+    margin: 0;
     padding: 0;
+
+    list-style: none;
 }
 
-.social-link a{
-    display: block;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(0, 0%, 20%);
-    text-decoration: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+.social-link {
+    margin-bottom: 1rem;
 }
 
-.social-link{
-    margin-bottom: 16px;
-}
-
-.social-link a:hover{
-    background-color: hsl(75, 94%, 57%);
-    color: hsl(0, 0%, 8%);
-    cursor: pointer;
-}
-
-.social-link a:focus{
-    outline: 2px solid hsl(75, 94%, 57%);
-    outline-offset: 2px;
-}
-
-.social-link:last-child{
+.social-link:last-child {
     margin-bottom: 0;
 }
 
-@media (max-width: 375px){
-    .profile-card{
+.social-link a {
+    display: block;
+
+    padding: 0.9375rem;
+
+    border-radius: 0.5rem;
+
+    background-color: var(--grey-700);
+    color: var(--white);
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.social-link a:hover,
+.social-link a:focus {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+.social-link a:focus {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+
+/* ===== Attribution ===== */
+
+.attribution {
+    text-align: center;
+    color: var(--white);
+    font-size: 0.75rem;
+}
+
+.attribution a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width: 23.4375rem) {
+    .profile-card {
         width: 90%;
-        padding: 24px;
+        padding: 1.5rem;
     }
 
-    h1{
-        font-size: 1.4rem;
+    h1 {
+        font-size: 1.5rem;
     }
-
 }
