@@ -39,7 +39,7 @@ main {
     gap: 1rem;
 }
 
-/* ===== Profile Card ===== */
+/* ===== Card ===== */
 
 .profile-card {
     background-color: var(--grey-800);
@@ -165,10 +165,10 @@ h1 {
     }
 }
 
-/* ===== Reduced Motion Accessibility ===== */
+/* ===== Reduced Motion ===== */
 
 @media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
+    .social-link a {
+        transition: none;
     }
 }
